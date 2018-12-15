@@ -1,0 +1,58 @@
+.user-profile{
+    position: fixed; /*for testing*/
+    height: 50vh; /*for testing*/
+    width: 50vw;  /*for testing*/
+    background: url('https://www.nasa.gov/sites/default/files/thumbnails/image/pillars_of_creation.jpg') center no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+
+.user-profile-header{
+    display: inline-flex;
+    height: 13vh;
+    width: 50vh;
+}
+
+a{
+    color: white; /*for testing*/
+}
+
+.user-profile-badge{
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    float: left;
+    height: fit-content;
+    width: fit-content;
+    text-align: left;
+    padding: 2em;
+}
+
+.external-links{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    height: fit-content;
+    width: fit-content;
+    text-align: right;
+    background-color: rgba(0, 0, 255, 0.551);
+    border: 0.1em solid black;
+    margin: 0.2em;
+}
+
+.user-profile-journal{
+    width: 50vh;
+}
+
+.user-journal-index{
+    height: fit-content;
+    width : 40vh;
+    margin: auto;
+}
+
+.uji-data{
+    color: white;
+    padding-left: 33%;
+}

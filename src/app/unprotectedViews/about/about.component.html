@@ -1,3 +1,76 @@
-<p>
-  about works!
-</p>
+<button class="testbutton" type="submit"></button>
+<div class="container">
+<div class="animate three">
+            <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span> &nbsp;
+</div>
+<br>
+<br>
+<p>Cosmoknot was founded in 2018 with the purpose of connecting educational resources with aspiring astronauts. Partnering with tech giants like Amazon and SpaceX, Cosmoknot seeks to reinvent and streamline the training process and connect prospective students with instructors. As an extension of NASA, we encourage any prospective applicants to fill out the form below and submit their credentials to our administrative staff. Upon being approved for enrollment, you will have access to your own Cosmoknot student portal that will allow you to post journal entries and view assignments. </p>
+<br>
+<br>
+<br>
+<section id="contact">
+  <div class="containercontact">
+   <h2 class="text-center">Apply</h2>
+   <br>
+   <br>
+   <div class="row">
+    <div class="col-12">
+     <form id='form' action="https://formspree.io/apply.cosmoknot@gmail.com" method="POST">
+      <div class="control-group">
+       <div class="form-group">
+        <label>Name</label>
+        <input 
+         type="text" 
+         class="form-control" 
+         placeholder="Your Name" 
+         id="name" 
+         required 
+         data-validation-required-message="Please enter your name"
+         name="name"
+         >
+        <p class="help-block text-danger"></p>
+       </div>
+      </div>
+      <div class="control-group">
+       <div class="form-group">
+        <label>Email Address</label>
+        <input 
+         type="email" 
+         class="form-control" 
+         placeholder="Your Email" 
+         id="email" 
+         required 
+         data-validation-required-message="Please enter your email"
+         name="_replyto"
+        >
+        <p class="help-block text-danger"></p>
+       </div>
+      </div>
+      <div class="control-group">
+       <div class="form-group">
+        <textarea 
+         class="form-control" 
+         rows="7" 
+         placeholder="List your credentials are the reasons why you are applying here." 
+         id="message" 
+         required 
+         data-validation-required-message="Please leave a message"
+         name="message"
+        ></textarea>
+        <p class="help-block text-danger"></p>
+       </div>
+      </div>
+      <div class="text-center">
+       <div id="success"></div>
+       <button type="submit" class="btn btn-lg btn-black">
+        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        Send Message
+       </button>
+      </div>
+     </form>
+    </div>
+   </div>
+  </div>
+ </section>
+ <router-outlet></router-outlet>
