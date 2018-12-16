@@ -20,7 +20,7 @@ import {
   MatSlideToggleModule,
   MatCardModule
  } from '@angular/material';
-import { JwtModule } from '@auth0/angular-jwt';
+//import { JwtModule } from '@auth0/angular-jwt';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './unprotectedViews/login/login.component';
 import { RegisterAdminComponent } from './unprotectedViews/register-admin/register-admin.component';
@@ -61,7 +61,7 @@ import { ApodService } from './services/apod.service';
     MatButtonModule,
     MatSlideToggleModule,
     MatCardModule,
-    JwtModule,
+    //JwtModule,
     BrowserAnimationsModule
   ],
   providers: [
