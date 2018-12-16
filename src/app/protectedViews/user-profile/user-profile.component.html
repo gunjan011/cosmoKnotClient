@@ -1,17 +1,14 @@
 <div class="user-profile">
   <header class="user-profile-header">
     <section class="user-profile-badge">
-      <h1>
-        <p class="user-profile-headline">Welcome, User!</p>
+      <h3>
+         Welcome, User!
     <!-- <p>{{user.username}}</p> -->
     <!-- <p>{{admin.created.this.user.account.email.value}}</p> -->
     <!-- <p><a>link to above admin's profile</a></p -->
-      </h1>
+      </h3>
     </section>
 
-    <section class="create-user-button" *ngIf="[this.user.is_admin]===true">
-      <app-create-user></app-create-user>
-    </section>
 
     <section class="external-links">
       <table>
@@ -33,16 +30,14 @@
       </table>
     </section>
   </header>
-
-  <hr />
-
+  
   <section class="user-profile-journal">
       <table class="user-journal-index">
           <thead>
             <tr>
-              <th class="uji-data">#</th> 
-              <th class="uji-id">Title</th> 
-              <th class="uji-id">Journal entry text</th> 
+              <th class="uji-data"></th> 
+              <th class="uji-title">Title</th> 
+              <th class="uji-text">Journal entry text</th> 
             </tr>
           </thead>
           <tbody> <!-- *ngIf="there are journal entries" -->

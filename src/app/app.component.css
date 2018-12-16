@@ -24,3 +24,19 @@ h2{
     color: rgb(249,207,159); 
     text-shadow: 4px 6px #000000;
 }
+
+body
+{
+    font-family: 'masseffect';
+    font-size: 14px;
+    color: white;
+    word-wrap:break-word;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    padding: 9px 15px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    color: gray;
+  }
