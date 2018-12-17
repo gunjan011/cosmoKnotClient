@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+@font-face {
+    font-family: 'masseffect';
+    src: url('../assets/me123.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    background-color: rgba(0, 255, 0, 0.67);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+}
+
+h2{
+    color: rgb(249,207,159); 
+    text-shadow: 4px 6px #000000;
+}
+
+body
+{
+    font-family: 'masseffect';
+    font-size: 14px;
+    color: white;
+    word-wrap:break-word;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    padding: 9px 15px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    color: gray;
+  }
