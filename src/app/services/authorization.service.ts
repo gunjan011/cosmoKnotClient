@@ -33,10 +33,12 @@ export class AuthorizationService {
     // return this.http.post<any>(`http://localhost:3000/user/login`, {user: {username, password }})
     .pipe(map(user => {
     
-      if (user && user) {
+      if ( user ) {
           localStorage.setItem('token', user.sessiontoken);
-          localStorage.setItem('atoken', user.adminToken)
-          localStorage.setItem('user', user.user);
+      }
+      if ( user.is_admin ) {    
+          localStorage.setItem('atoken', user.adminToken);
+          //localStorage.setItem('user', user.user);
           // localStorage.setItem('userID', user.id);
       }
 
