@@ -1,11 +1,11 @@
-<div class="jumbotron">
-      
-  <div class="container">
-        <div class="card" *ngFor="let image of testArray">
-              <img class="card-img-top" src="{{image.url}}" alt="Card image cap">
-              <div class="card-body">
-                    <h5 class="card-title">{{image.title}}</h5>
-                    <p class="card-text">{{image.explanation}}</p>
-                    <p class="card-text"><small class="text-muted">Created {{image.date}} &copy;{{image.copyright}}</small></p>
-              </div>
-        </div>
+<div class="container">
+      <div class="card" *ngFor="let image of testArray">
+            <img class="card-img-top" src="{{image.url}}" alt="Card image cap">
+            <div class="card-body">
+                  <h5 class="card-title">{{image.title}}</h5>
+                  <p class="card-text">{{image.explanation}}</p>
+                  <p class="card-text"><small class="text-muted">Created {{image.date}} &copy;{{image.copyright}}</small></p>
+            </div>
+      </div>
+</div>
+<router-outlet></router-outlet>

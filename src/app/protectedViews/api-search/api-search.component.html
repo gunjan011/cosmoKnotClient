@@ -1,3 +1,27 @@
-<p>
-  api-search works!
-</p>
+<div>
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar></div>
+        <!-- <mat-card-title *ngIf="{{content.title}}===null">New Reading List Item</mat-card-title>
+        <mat-card-title *ngIf="{{content.title}}!==null">{{ content.title }}</mat-card-title>
+        <mat-card-subtitle *ngIf="{{content.creator}}===null">by {{ content.creator }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="{{content.creator}}!==null"></mat-card-subtitle> -->
+      </mat-card-header>
+      <mat-card-content>
+        <p>kjsdnfoashgoifhawsoIJFDsafoizrhgdfsoiejdfaoipjsenzrgfdvnsezosi;dnfosiuejzrnfsdgiopufhasenrsoifdhnsezoirfghbvnsoierzjlksfdcwosekjbgzdinvjlskemzrsoid;ljvk eizjdlbvnmoise;zrdviusjebnzrfgudivjnaezorisfdkvnseirf</p>
+        <!-- <form #journalForm= "ngForm" (ngSubmit)="publishJournal()" [value]="user.username" [ngModel]="content.creator">
+          <mat-form-field>
+            <p>Title:</p>
+            <input matInput placholder="Title your entry" name="title" [(ngModel)]="content.title" required>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placholder="start your entry here..." name="content_text" [(ngModel)]="content.content_text" required>
+          </mat-form-field>
+        </form> -->
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button (click)="onCancel()" color="warn">Cancel</button>
+        <button mat-stroked-button (click)="onSubmit()" color="accent">Publish</button>    
+      </mat-card-actions>
+    </mat-card>
+  </div>
