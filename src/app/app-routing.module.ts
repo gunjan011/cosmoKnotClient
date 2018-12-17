@@ -19,7 +19,7 @@ const exposed_routes : Routes = [
 
 const protected_routes : Routes = [
   { path : 'myprofile', component : UserProfileComponent },
-  { path : 'jornal_entry', component : JournalComponent },
+  { path : 'journal_entry', component : JournalComponent },
   { path : 'reading_list', component : ApiSearchComponent }
 ];
 
