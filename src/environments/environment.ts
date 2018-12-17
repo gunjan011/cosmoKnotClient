@@ -14,14 +14,10 @@ export const environment2 = {
 
 let cosmoknotURL = '';
 switch (window.location.hostname) {
-   // this is the local host name of your react app
    case 'localhost' || '127.0.0.1':
-       // this is the local host name of your API
        cosmoknotURL = 'http://localhost:4666';
        break;
-  //  this is the deployed angular application
    case 'cosmoknot-client.herokuapp.com':
-       // this is the full url of your deployed API
 cosmoknotURL = 'https://cosmoknotserver.herokuapp.com'
 }
 

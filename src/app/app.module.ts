@@ -30,7 +30,8 @@ import { CreateUserComponent } from './protectedViews/create-user/create-user.co
 import { CreateUserDiagBoxComponent } from './protectedViews/create-user-diag-box/create-user-diag-box.component';
 import { ApodComponent } from './unprotectedViews/apod/apod.component';
 import { ApodService } from './services/apod.service';
-import { SiteNavComponent } from './site-nav/site-nav.component';
+import { SiteNavComponent } from './Navs/site-nav/site-nav.component';
+import { UserNavComponent } from './Navs/user-nav/user-nav.component';
 
 
 
@@ -50,7 +51,8 @@ import { SiteNavComponent } from './site-nav/site-nav.component';
     CreateUserComponent,
     CreateUserDiagBoxComponent,
     ApodComponent,
-    SiteNavComponent
+    SiteNavComponent,
+    UserNavComponent
   ],
   imports: [
     BrowserModule,

@@ -13,5 +13,5 @@ html, body {
 body {
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background: url('https://i.imgur.com/cplXyB9.jpg');
+    background: url('https://i.imgur.com/cplXyB9.jpg') top no-repeat;
 }

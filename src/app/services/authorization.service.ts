@@ -1,53 +1,57 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { UserData } from '../models/user';
-
+import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+import { ActiveUserData } from '../models/activeUser';
+import { AdminToken, SessionToken } from '../models/tokens';
+import {} from '@angular/core/';
 
 const httpOptions = {
   headers: new HttpHeaders({
       'Content-Type': 'application/json'
   })
-}
+};
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class AuthorizationService {
-  private currentUserSubject: BehaviorSubject<UserData>;
-  public currentUser: Observable<UserData>;
+  public user : ActiveUserData;
+  token = new SessionToken;
+  aToken? = new AdminToken;
 
-  constructor(private http: HttpClient) {
-      this.currentUserSubject = new BehaviorSubject<UserData>(JSON.parse(localStorage.getItem('sessionToken')));
-      this.currentUser = this.currentUserSubject.asObservable();
+  constructor(
+    private http: HttpClient
+  ){}
+
+  public get activeUserValue(): void {
+    switch(this.user.is_admin){
+      case true:
+        JSON.parse(localStorage.getItem('adminToken'));
+        JSON.parse(localStorage.getItem('sessionToken'));
+        return localStorage.setItem('sessionToken', this.token.sessionToken), 
+        localStorage.setItem('adminToken', this.aToken.adminToken);
+      case false:
+        JSON.parse(localStorage.getItem('sessionToken'))
+        return localStorage.setItem('sessionToken', this.token.sessionToken)
+      } 
+    }
+
+  login(user): Observable<ActiveUserData> {
+    return this.http.post<ActiveUserData>(`https://cosmoknotserver.herokuapp.com/user/login`, user, httpOptions)
+      .pipe(tap(user => {
+        if(user){
+          this.activeUserValue
+        } return user;
+      })
+    );
   }
-
-  public get currentUserValue(): UserData {
-    return this.currentUserSubject.value;
-}
-
-  login(username: string, password: string, is_admin: boolean, adminID: string) {
-    return this.http.post<any>(`https://cosmoknotserver.herokuapp.com/user/login`, {user: {username, password, is_admin, adminID }})
-    // return this.http.post<any>(`http://localhost:3000/user/login`, {user: {username, password }})
-    .pipe(map(user => {
     
-      if (user && user) {
-          localStorage.setItem('token', user.sessiontoken);
-          localStorage.setItem('atoken', user.adminToken)
-          localStorage.setItem('user', user.user);
-          // localStorage.setItem('userID', user.id);
-      }
+  logout(): void {
+    localStorage.clear();
+  }
+}
 
-      return user;
-  }));
-}
-   
-logout() {
-  localStorage.removeItem('sessionToken');
-}
-}
 
 // import { Injectable } from '@angular/core';
 // import { HttpClient, HttpHeaders } from '@angular/common/http';
