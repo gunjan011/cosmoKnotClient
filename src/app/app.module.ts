@@ -84,5 +84,6 @@ import { UserNavComponent } from './Navs/user-nav/user-nav.component';
     CreateUserComponent,
     RegisterAdminComponent
   ]
+  
 })
 export class AppModule { }

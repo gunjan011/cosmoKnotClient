@@ -20,12 +20,14 @@ const exposed_routes : Routes = [
   { path : 'home', component : HomepageComponent },
   { path : 'apod', component: ApodComponent},
   { path : 'register', component: RegisterAdminComponent},
-  { path : 'login', component: LoginComponent}
+  { path : 'login', component: LoginComponent},
+  { path : 'journal_entry', component : JournalComponent },
+
 ];
 
 const protected_routes : Routes = [
   { path : 'myprofile', component : UserProfileComponent },
-  { path : 'journal_entry', component : JournalComponent },
+  
   { path : 'reading_list', component : ApiSearchComponent }
 ];
 

@@ -1,0 +1,33 @@
+.card-img-top {
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    margin-left: 29em;
+    margin-top: 2em;
+    
+}
+
+.card-text {
+    font-family: 'masseffect';
+    position: fixed;
+    margin-top: 32em;
+    padding: 45px;
+    color: white;
+    background: rgba(131,124,140, .5);
+    padding: 25px;
+}
+
+.card-text2 {
+    font-family: 'masseffect';
+    position: fixed;
+    color: white;
+    margin-top: 28em;
+    margin-left: 2em;
+}
+
+.card-title {
+    font-family: 'masseffect';
+    color: white;
+    margin-left: 32em;
+
+}

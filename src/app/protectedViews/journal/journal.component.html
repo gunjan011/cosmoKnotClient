@@ -1,24 +1,44 @@
-<mat-card>
+<!-- <mat-card>
   <mat-card-header>
     <div mat-card-avatar></div>
-    <!-- <mat-card-title *ngIf="{{content.title}}===null">My Journal Entry</mat-card-title>
-    <mat-card-title *ngIf="{{content.title}}!==null">{{ content.title }}</mat-card-title>
-    <mat-card-subtitle>by {{ user.username }}</mat-card-subtitle> -->
+    <mat-card-title>My Journal Entry</mat-card-title>
+    <mat-card-title >{{ content.title }}</mat-card-title>
+    <mat-card-subtitle>by {{ user.username }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    fjashgoihoiafaowiejflk;jsdkljl;kjsl;ekjdzvlknslkdxjzfndvcoiszjsfo;ijdjcgnvsoi;ejzdn;oifjmlkerjdsnlvenrzdj;ifmas;oierhgipqvaenrf
-    <!-- <form #journalForm= "ngForm" (ngSubmit)="publishJournal()" [ngModel]="content.creator" [value]="user.username">
+    <form #journalForm= "ngForm" (ngSubmit)="publishJournal()">
       <mat-form-field>
         <p>Title:</p>
-        <input matInput placholder="Title your entry" name="title" [(ngModel)]="content.title" required>
+        <input matInput placholder="Title your entry" name="title" required>
       </mat-form-field>
       <mat-form-field>
-        <textarea matInput placholder="start your entry here..." name="content_text" [(ngModel)]="content.content_text" required>
+        <textarea matInput placholder="start your entry here..." name="content_text" required>
       </mat-form-field>
-    </form> -->
+    </form>
   </mat-card-content>
   <mat-card-actions>
     <button mat-stroked-button (click)="onCancel()" color="warn">Cancel</button>
     <button mat-stroked-button (click)="onSubmit()" color="accent">Publish</button>
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+<h1>Create a Note.</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Title" formControlName="Title" type="Title" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Content" formControlName="Content" type="Content" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Note</button>
+</form>
+
+<a mat-button routerLink="/notes">Back to List</a>
