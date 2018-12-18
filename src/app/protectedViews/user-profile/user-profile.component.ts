@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-// import { UpdateProfileComponent } from './update-profile/update-profile.component';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { ActiveUserData } from '../../models/activeUser';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css']
 })
-export class UserProfileComponent implements OnInit {
+export class UserProfileComponent{
+  public user : BehaviorSubject<ActiveUserData>
 
-  constructor( ) { }
+  constructor() { }
 
-  ngOnInit() {
-    }
 
 }
