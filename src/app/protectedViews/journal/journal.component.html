@@ -25,7 +25,7 @@
 <h1>Create a Note.</h1>
 <hr>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+<form (ngSubmit)="onSubmit()" [formGroup]="noteForm">
   <div>
     <div>
       <mat-form-field>
