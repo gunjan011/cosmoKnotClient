@@ -27,7 +27,8 @@ export class JournalComponent implements OnInit {
   }
 
   onSubmit(){
-    this._noteService.createNote(this.noteForm.value).subscribe(data => { 
+    this._noteService.createjournal(this.noteForm.value.user, this.noteForm.value.title, this.noteForm.value.entry).subscribe(data => { 
       this._router.navigate(['/notes']);
     });
   }
+}
