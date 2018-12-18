@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AdminService } from './services/admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cosmoknot';
+
+  constructor (
+    private auth: AdminService,
+    private router: Router,
+  ) { }
+
+  logout() {
+    this.auth.logout();
+    this.router.navigate(['/home']);
+    window.alert("Logged out");
+  }
 }

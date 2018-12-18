@@ -1,3 +1,79 @@
-<p>
-  user-profile works!
-</p>
+<div class="user-profile">
+  <header class="user-profile-header">
+    <section class="user-profile-badge">
+      <h3>
+         Welcome, User!
+    <!-- <p>{{user.username}}</p> -->
+    <!-- <p>{{admin.created.this.user.account.email.value}}</p> -->
+    <!-- <p><a>link to above admin's profile</a></p -->
+      </h3>
+    </section>
+
+
+    <section class="external-links">
+      <table>
+        <tr>
+          <td><a href="https://mars.nasa.gov/programmissions/overview/" target="_blank">NASA Mars Exploration Program & Missions Overview</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.spacex.com/careers" target="_blank">SpaceX</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.virgingalactic.com/join/" target="_blank">Virgin Galactic</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.blueorigin.com/careers" target="_blank">Blue Origin</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.spacecamp.com/space/adult" target="_blank">On-Earth Training Programs</a></td>
+        </tr>
+      </table>
+    </section>
+  </header>
+  
+  <section class="user-profile-journal">
+      <table class="user-journal-index">
+          <thead>
+            <tr>
+              <th class="uji-data"></th> 
+              <th class="uji-title">Title</th> 
+              <th class="uji-text">Journal entry text</th> 
+            </tr>
+          </thead>
+          <tbody> <!-- *ngIf="there are journal entries" -->
+           
+            <!-- <tr *ngFor="let je of journal_entry">  -->
+              <!--<td> {{journal_entry.id}} </td> -->
+              <!--<td> {{journal_entry.title}} </td> -->
+              <!--<td> {{journal_entry.entry}} </td> --> 
+            <!-- </tr> -->
+    
+          </tbody>
+        </table>
+  </section>
+
+  <hr />
+
+  <section class="user-profile-reading-list">
+      <table class="reading list">
+          <thead>
+            <tr>
+              <th class="rl-data">#</th> 
+              <th class="rl-data">Article</th> 
+              <th class="rl-data">Link</th> 
+            </tr>
+          </thead>
+          <tbody> <!-- *ngIf="there are reading list items" -->
+           
+            <!-- <tr *ngFor="let read of reading list">  *REMEMBER: reading list CRUD utilizes journal_entry for MVC*  -->
+              <!--<td> {{admin.created.this.user.account.journal_entry.id}} </td> -->
+              <!--<td> {{admin.created.this.user.account.journal_entry.title}} </td> -->
+              <!--<td> {{admin.created.this.user.account.journal_entry.entry}} </td> --> 
+            <!-- </tr> -->
+    
+          </tbody>
+        </table>
+  </section>
+
+</div>
+<router-outlet></router-outlet>

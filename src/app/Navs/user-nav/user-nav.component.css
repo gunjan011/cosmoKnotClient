@@ -1,0 +1,8 @@
+.navigator{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    height: fit-content;
+    width: fit-content;
+    padding: 1em;  
+}
