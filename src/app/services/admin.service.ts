@@ -31,7 +31,15 @@ export class AdminService {
   }
 
   register(username, password, is_admin, adminID) {
-    return this.http.post<any>(`https:/cosmoknotserver.herokuapp.com/user/register/admin`,{ UserData: username, password, is_admin, adminID } )
+    let adminUserToServer = { 
+      user: {
+        username,
+        password,
+        is_admin,
+        adminID
+      }
+    }
+    return this.http.post<any>(`https:/cosmoknotserver.herokuapp.com/user/register/admin`, adminUserToServer )
     .pipe(map(user => {
       if ( user && user ) {
         localStorage.setItem('token', user.sessionToken);
@@ -52,7 +60,10 @@ export class AdminService {
   deleteUser() {
     return this.http.delete<any>(`https:/cosmoknotserver.herokuapp.com/user/delete_account/:id`, httpOptions)
   }
-  updateUser() {
-    return this.http.put<any>(`https:/cosmoknotserver.herokuapp.com/user/update_account/:id`, httpOptions)
+  updateUser(id) {
+    return this.http.put<any>(`https:/cosmoknotserver.herokuapp.com/user/update_account/:id`, id, httpOptions)
+  }
+  logout() {
+    localStorage.removeItem('token');
   }
 }

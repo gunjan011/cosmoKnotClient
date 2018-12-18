@@ -10,25 +10,29 @@ import { UserData } from '../../models/user';
   <div mat-dialog-content>
     <form #newUserForm="ngForm" (ngSubmit)="onSubmit()">
       <mat-form-field>
-        <label>An easy-to-remember-username (they can change it later):
-          <input matInput type="text" name="username" [(ngModel)]="user.username">
-        </label>
-        <p>An easy-to-remember-password (they can change it later):</p>
-        <input matInput type="text" name="password" [(ngModel)]="user.password">
+        <p>An easy-to-remember-username:</p>
+        <input matInput placeholder="they can change it later" type="text" name="username" [(ngModel)]="user.username" required>
+      </mat-form-field>
+      <mat-form-field>
+        <p>An easy-to-remember-password:</p>
+        <input matInput placeholder="they should change it later" type="text" name="password" [(ngModel)]="user.password" required>
+      </mat-form-field>
+      <mat-form-field>
         <p>Your Admin Email:</p>
         <input matInput type="text" name="adminID" [(ngModel)]="user.adminID" required>
       </mat-form-field>
     </form>
     <div mat-dialog-actions>
-      <button mat-button (click)="onCancel()">Cancel</button>
-      <button mat-button (click)="submitted=false">Create User</button>
+      <button mat-button (click)="onCancel()" color="warn">Cancel</button>
+      <button mat-button (click)="submitted=false" color="accent">Create User</button>
     </div>
   </div>
   `,
   styleUrls: ['./create-user-diag-box.component.css']
 })
 export class CreateUserDiagBoxComponent {
-  user = new UserData
+  user = new UserData;
+
   
   constructor(
     private createDiagRef : MatDialogRef<CreateUserDiagBoxComponent>,

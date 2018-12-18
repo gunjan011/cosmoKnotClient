@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { LoginDiagBoxComponent } from '../login-diag-box/login-diag-box.component';
+import { UserData } from '../../models/user';
+import { AuthorizationService } from 'src/app/services/authorization.service';
 
 export interface ActiveUser{
   username : string;
@@ -21,7 +23,9 @@ export class LoginComponent  {
   public adminID : string;
 
   
-  constructor(public loginDiag : MatDialog) { }
+  constructor(public loginDiag : MatDialog,
+    private authService: AuthorizationService ) { }
+    user = new UserData
 
   clickLogin(): any {
     const logDiagRef = this.loginDiag.open(LoginDiagBoxComponent, {

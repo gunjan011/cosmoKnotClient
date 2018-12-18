@@ -3,4 +3,6 @@ export class ActiveUserData{
     password : string;
     is_admin : boolean;
     adminID? : string;
+    token : string;
+    aToken? : string;
   }
