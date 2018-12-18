@@ -27,7 +27,12 @@ export class RegisterAdminComponent {
   constructor( private router: Router,
     private adminService: AdminService,
     public registerDiag: MatDialog) { }
-  user = new AdminData
+  user: AdminData = {
+    username: '',
+    password: '',
+    is_admin: false,
+    adminID: ''
+  }
 
   clickRegister(): any {
     const regDiagRef = this.registerDiag.open(RegisterAdminDiagBoxComponent, {

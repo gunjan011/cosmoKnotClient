@@ -3,8 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { ActiveUserData } from '../models/activeUser';
-import { AdminToken, SessionToken } from '../models/tokens';
+import { Token } from '../models/tokens';
 import { } from '@angular/core/';
+import { cosmoknotURL } from '../../environments/environment';
+//import { Token } from '@angular/compiler';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -17,8 +19,10 @@ const httpOptions = {
 })
 export class AuthorizationService {
   public user: ActiveUserData;
-  token = new SessionToken;
-  aToken?= new AdminToken;
+   token: Token;
+   aToken?: Token;
+
+
 
   constructor(
     private http: HttpClient
@@ -37,14 +41,13 @@ export class AuthorizationService {
     }
   }
 
-  login(user): Observable<ActiveUserData> {
-    return this.http.post<ActiveUserData>(`https://cosmoknotserver.herokuapp.com/user/login`, user, httpOptions)
-      .pipe(tap(user => {
-        if (user) {
-          this.activeUserValue
-        } return user;
+  login(user) {
+    
+    return this.http.post(`${cosmoknotURL}/user/login`, {user: user})
+      .subscribe((token: Token) => {
+        localStorage.setItem('id_token', token.sessionToken);
       })
-      );
+
   }
 
   logout() {
