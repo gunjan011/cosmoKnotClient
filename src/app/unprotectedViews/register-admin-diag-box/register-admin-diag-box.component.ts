@@ -70,7 +70,7 @@ export class RegisterAdminDiagBoxComponent {
       this.user.is_admin,
       this.user.adminID)
       .subscribe(res => {
-        console.log(res), sessionStorage.setItem("atoken", res.aToken)
+        console.log(res)
       })
   }
 

@@ -65,5 +65,7 @@ export class AdminService {
   }
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem("atoken");
+    sessionStorage.removeItem("atoken");
   }
 }
