@@ -32,6 +32,7 @@ import { ApodComponent } from './unprotectedViews/apod/apod.component';
 import { ApodService } from './services/apod.service';
 import { SiteNavComponent } from './Navs/site-nav/site-nav.component';
 import { UserNavComponent } from './Navs/user-nav/user-nav.component';
+import { UpdateProfileComponent } from './protectedViews/user-profile/update-profile/update-profile.component';
 
 
 
@@ -52,7 +53,8 @@ import { UserNavComponent } from './Navs/user-nav/user-nav.component';
     CreateUserDiagBoxComponent,
     ApodComponent,
     SiteNavComponent,
-    UserNavComponent
+    UserNavComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,

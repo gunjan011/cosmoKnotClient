@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor( /*private  : FormsModule*/) { }
+  constructor( ) { }
 
   ngOnInit() {
     }
