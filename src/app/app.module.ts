@@ -9,7 +9,7 @@ import { HomepageComponent } from './unprotectedViews/homepage/homepage.componen
 import { UserProfileComponent } from './protectedViews/user-profile/user-profile.component';
 import { AboutComponent } from './unprotectedViews/about/about.component';
 import { MissionComponent } from './unprotectedViews/mission/mission.component';
-import { ApiSearchComponent } from './protectedViews/api-search/api-search.component';
+//import { ApiSearchComponent } from './protectedViews/api-search/api-search.component';
 import { JournalComponent } from './protectedViews/journal/journal.component';
 
 import { 
@@ -42,7 +42,7 @@ import { UserNavComponent } from './Navs/user-nav/user-nav.component';
     UserProfileComponent,
     AboutComponent,
     MissionComponent,
-    ApiSearchComponent,
+    //ApiSearchComponent,
     JournalComponent,
     LoginComponent,
     RegisterAdminComponent,

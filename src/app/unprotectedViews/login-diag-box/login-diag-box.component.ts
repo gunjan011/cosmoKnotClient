@@ -10,10 +10,9 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-login-diag-box',
   template: `
-    {{ diagnostic }}
     <h2 mat-dialog-title>Login to your Cosmoknot Account</h2>
     <div mat-dialog-content>
-      <form (ngSubmit)="onSubmit()" [formGroup] = "_loginForm">
+      <form (ngSubmit)="onSubmit()" [formGroup] = "loginForm">
         <mat-form-field>
           <p>Your username:</p>
           <input matInput type="text" name="username" formControlName="username" required>
@@ -39,7 +38,7 @@ export class LoginDiagBoxComponent {
     token: '',
     aToken: ''
   }
-  private _loginForm: FormGroup;
+  private loginForm: FormGroup;
   submitted: boolean;
   error = ''
 
@@ -60,7 +59,7 @@ export class LoginDiagBoxComponent {
         : this.user.is_admin = false;
   }
   createForm() {
-    this._loginForm = this._form.group({
+    this.loginForm = this._form.group({
       username: new FormControl,
       password: new FormControl,
       is_admin: false,
@@ -69,9 +68,9 @@ export class LoginDiagBoxComponent {
   }
 
   onSubmit() {
-    console.log(this._loginForm.value)
+    console.log(this.loginForm.value)
     //this.loginAsAdmin(this.user)
-    this._auth.login(this._loginForm.value)
+    this._auth.login(this.loginForm.value)
   }
 
   onCancel(): void {

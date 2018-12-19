@@ -7,7 +7,7 @@ import { AboutComponent } from './unprotectedViews/about/about.component';
 
 
 import { UserProfileComponent } from './protectedViews/user-profile/user-profile.component';
-import { ApiSearchComponent } from './protectedViews/api-search/api-search.component';
+// import { ApiSearchComponent } from './protectedViews/api-search/api-search.component';
 import { JournalComponent } from './protectedViews/journal/journal.component';
 import { ApodComponent } from './unprotectedViews/apod/apod.component';
 import { RegisterAdminComponent } from './unprotectedViews/register-admin/register-admin.component';
@@ -26,9 +26,9 @@ const exposed_routes : Routes = [
 ];
 
 const protected_routes : Routes = [
-  { path : 'myprofile', component : UserProfileComponent },
+  { path : 'myprofile', component : UserProfileComponent }
   
-  { path : 'reading_list', component : ApiSearchComponent }
+ // { path : 'reading_list', component : ApiSearchComponent }
 ];
 
 @NgModule({
