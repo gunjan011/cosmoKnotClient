@@ -14,12 +14,12 @@ import { ApodResponse } from '../models/apod.response';
 })
 export class ApodService {
   // nasa_api_key1: string = gkey.nasa_api_key1;
-  // nasa_url =  `https://api.nasa.gov/planetary/apod?api_key=${this.nasa_api_key1}&date&count=1`;
+   nasa_url =  `https://api.nasa.gov/planetary/apod?api_key=${this.nasa_api_key1}&date&count=1`;
   
   constructor(private httpClient: HttpClient) { }
 
-//  getPicture(): Observable<HttpResponse<ApodResponse[]>> {
-//     return this.httpClient.get<ApodResponse[]>(this.nasa_url, {observe: 'response'});
-//   }
+ getPicture(): Observable<HttpResponse<ApodResponse[]>> {
+    return this.httpClient.get<ApodResponse[]>(this.nasa_url, {observe: 'response'});
+  }
 }
 

@@ -19,10 +19,10 @@ export class ApiSearchComponent {
     private apiSearchService : ApiSearchService
   ) { }
 
-  submitSearch() : any {
-    this.apiSearchService.geneLabSearch(this.endpoint.termURL, this.endpoint.typeURL)
-      .subscribe(results => this.results = results)
-  }
+  // submitSearch() : any {
+  //   this.apiSearchService.geneLabSearch(this.endpoint.termURL, this.endpoint.typeURL)
+  //     .subscribe(results => this.results = results)
+  // }
 
 }
 export interface Endpoint {
