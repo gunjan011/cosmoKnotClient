@@ -5,24 +5,24 @@ export const environment = {
   production: false,
 };
 
-export const gkey = {
-  production: false,
-  nasa_api_key1: "EvU3DzditQY4ezLs3w0QvGSLXlQOyF5NsKs2tfZM"
-};
+// export const gkey = {
+//   production: false,
+//   nasa_api_key1: "EvU3DzditQY4ezLs3w0QvGSLXlQOyF5NsKs2tfZM"
+// };
 
-export const jkey = {
-  production : false, 
-  nasa_api_key2 : 'XJtEhwjDtqK3p6oWeN3p8BGqgsPGS66ecVao5mzy'
-} ;
+// export const jkey = {
+//   production : false, 
+//   nasa_api_key2 : 'XJtEhwjDtqK3p6oWeN3p8BGqgsPGS66ecVao5mzy'
+// } ;
 
- export let cosmoknotURL = '';
- switch (window.location.hostname) {
-    case 'localhost' || '127.0.0.1':
-        cosmoknotURL = 'https://cosmoknotserver.herokuapp.com';
-        break;
-    case 'cosmoknot-client.herokuapp.com':
- cosmoknotURL = 'https://cosmoknotserver.herokuapp.com'
- }
+//  export let cosmoknotURL = '';
+//  switch (window.location.hostname) {
+//     case 'localhost' || '127.0.0.1':
+//         cosmoknotURL = 'https://cosmoknotserver.herokuapp.com';
+//         break;
+//     case 'cosmoknot-client.herokuapp.com':
+//  cosmoknotURL = 'https://cosmoknotserver.herokuapp.com'
+//  }
 
 
 

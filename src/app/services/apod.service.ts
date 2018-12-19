@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse/*, HttpHeaders */} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApodResponse } from '../models/apod.response';
-import { gkey } from '../../environments/environment';
+//import { gkey } from '../../environments/environment';
 
 // const httpCorb = {
 //   headers: new HttpHeaders({

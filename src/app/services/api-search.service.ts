@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Endpoint, Results } from '../protectedViews/api-search/api-search.component'
-import { jkey } from '../../environments/environment';
+//import { jkey } from '../../environments/environment';
 
 export const base = 'https://genelab-data.ndc.nasa.gov/genelab/data/search'
 @Injectable({
