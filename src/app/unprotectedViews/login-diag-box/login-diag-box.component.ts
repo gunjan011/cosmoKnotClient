@@ -10,23 +10,28 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-login-diag-box',
   template: `
-    {{ diagnostic }}
-    <h2 mat-dialog-title>Login to your Cosmoknot Account</h2>
-    <div mat-dialog-content>
-      <form (ngSubmit)="onSubmit()" [formGroup] = "_loginForm">
-        <mat-form-field>
-          <p>Your username:</p>
-          <input matInput type="text" name="username" formControlName="username" required>
-        </mat-form-field>
-        <mat-form-field>
-          <p>Your password:</p>
-          <input matInput type="password" name="password" formControlName="password" required>
-        </mat-form-field>
-        <button mat-button (click)="onCancel()" color="warn">Cancel</button>
-        <button mat-button  type="submit" color="accent">Login</button>
-      </form>
-      </div>
-  
+  <h2 mat-dialog-title>Login to your Cosmoknot Account</h2>
+  <div mat-dialog-content>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <mat-form-field>
+        <p>Your username:</p>
+        <input matInput type="text" name="username" [(ngModel)]="user.username" required>
+      </mat-form-field>
+      <mat-form-field>
+        <p>Your password:</p>
+        <input matInput type="password" name="password" [(ngModel)]="user.password" required>
+      </mat-form-field>
+      <mat-slide-toggle (click)="loginAsAdmin()" name="is_admin" [(ngModel)]="user.is_admin">Are you an admin?</mat-slide-toggle>
+      <mat-form-field *ngIf="user.is_admin===true">
+        <p>Admin Email:</p>
+        <input matInput type="text" name="adminID" [(ngModel)]="adminID" required>
+      </mat-form-field>
+    </form>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onCancel()" color="warn">Cancel</button>
+      <button mat-button (click)="submitted=false" color="accent">Login</button>
+    </div>
+  </div>
   `,
   styleUrls: ['./login-diag-box.component.css']
 })
