@@ -1,9 +1,9 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from '../../services/admin.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AdminData } from '../../models/admin';
-import { UserData } from 'src/app/models/user';
+
 
 @Component({
   selector: 'app-register-admin-diag-box',
@@ -32,7 +32,13 @@ import { UserData } from 'src/app/models/user';
   styleUrls: ['./register-admin-diag-box.component.css']
 })
 export class RegisterAdminDiagBoxComponent {
-  user: AdminData;
+  user: AdminData = {
+    username: '',
+    password: '',
+    is_admin: false,
+    adminID: ''
+
+  };
   loginForm: JSON;
   submitted: boolean;
   error = ''
@@ -49,7 +55,7 @@ export class RegisterAdminDiagBoxComponent {
     this.auth.register(username, password, is_admin, adminID)
       .subscribe(
         data => {
-          this.router.navigate(['/myprofile'])
+          this.router.navigate(['myprofile'])
         },
         error => {
           this.error = error;
@@ -73,25 +79,7 @@ export class RegisterAdminDiagBoxComponent {
         console.log(res)
       })
   }
-
-  // onSubmit(): void {
-  //   if(this.loginForm !== null){
-  //     this.auth.login(
-  //       this.activeUser
-  //     )
-  //   }
-  //   this.ifSubmit()
-  // }
-
-  // ifSubmit(): void {
-  //   if(this.submitted = true){
-  //     this.logDiagRef.close();
-  //   }
-  // }
-
   onCancel(): void {
     this.logDiagRef.close();
   }
-
-
 }

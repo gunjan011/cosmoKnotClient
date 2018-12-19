@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './unprotectedViews/homepage/homepage.component';
@@ -58,6 +58,7 @@ import { UserNavComponent } from './Navs/user-nav/user-nav.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     MatCheckboxModule,
     MatInputModule,
@@ -83,5 +84,6 @@ import { UserNavComponent } from './Navs/user-nav/user-nav.component';
     CreateUserComponent,
     RegisterAdminComponent
   ]
+  
 })
 export class AppModule { }

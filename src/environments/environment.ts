@@ -12,16 +12,16 @@ export const environment2 = {
   nasa_api_key2 : 'XJtEhwjDtqK3p6oWeN3p8BGqgsPGS66ecVao5mzy'
 } ;
 
-let cosmoknotURL = '';
-switch (window.location.hostname) {
-   case 'localhost' || '127.0.0.1':
-       cosmoknotURL = 'http://localhost:3000';
-       break;
-   case 'cosmoknot-client.herokuapp.com':
-cosmoknotURL = 'https://cosmoknotserver.herokuapp.com'
-}
+ export let cosmoknotURL = '';
+ switch (window.location.hostname) {
+    case 'localhost' || '127.0.0.1':
+        cosmoknotURL = 'https://cosmoknotserver.herokuapp.com';
+        break;
+    case 'cosmoknot-client.herokuapp.com':
+ cosmoknotURL = 'https://cosmoknotserver.herokuapp.com'
+ }
 
-export default cosmoknotURL;
+
 
 /*
  * For easier debugging in development mode, you can import the following file
