@@ -37,7 +37,7 @@ import { ApodService } from './services/apod.service';
 import { SiteNavComponent } from './Navs/site-nav/site-nav.component';
 import { UserNavComponent } from './Navs/user-nav/user-nav.component';
 import { UpdateProfileComponent } from './protectedViews/user-profile/update-profile/update-profile.component';
-
+import { ProfileService } from './services/profile.service';
 
 
 @NgModule({
@@ -59,12 +59,12 @@ import { UpdateProfileComponent } from './protectedViews/user-profile/update-pro
     SiteNavComponent,
     UserNavComponent,
     UpdateProfileComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
@@ -79,7 +79,8 @@ import { UpdateProfileComponent } from './protectedViews/user-profile/update-pro
   ],
   providers: [
     HttpClient,
-    ApodService
+    ApodService,
+    ProfileService
   ],
   entryComponents:[
     LoginDiagBoxComponent,
@@ -92,5 +93,6 @@ import { UpdateProfileComponent } from './protectedViews/user-profile/update-pro
     CreateUserComponent,
     RegisterAdminComponent
   ]
+  
 })
 export class AppModule { }

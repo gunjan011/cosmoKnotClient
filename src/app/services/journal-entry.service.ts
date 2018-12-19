@@ -19,7 +19,7 @@ export class JournalEntryService {
 
 constructor(private http: HttpClient) { }
 
-  getjournalentry(payment: any): Observable<JournalEntry[]> {
+  getjournalentry(journalentry: any): Observable<JournalEntry[]> {
     return this.http.get<JournalEntry[]>(`https://cosmoknotserver.herokuapp.com/user/userposts/`, httpOptions)
   }
   deletejournalentry(id: any): Observable<JournalEntry> {

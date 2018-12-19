@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import { JournalEntryService } from '../../services/journal-entry.service';
+import { JournalEntry } from 'src/app/models/journal-entry';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-journal',
@@ -8,14 +11,24 @@ import { Location } from '@angular/common';
 })
 export class JournalComponent implements OnInit {
 
-  constructor(private location : Location) { }
+  noteForm: FormGroup;
 
+  constructor(private _noteService: JournalEntryService, private _form: FormBuilder, private _router: Router) { this.createForm();
+  }
   ngOnInit() {
   }
 
-  onCancel(): void {
-    this.location.back();
+  createForm() {
+    this.noteForm = this._form.group({
+      user: new FormControl,
+      title: new FormControl,
+      entry: new FormControl,
+  });
   }
 
-  onSubmit(){}
+  onSubmit(){
+    this._noteService.createjournal(this.noteForm.value.user, this.noteForm.value.title, this.noteForm.value.entry).subscribe(data => { 
+      this._router.navigate(['/notes']);
+    });
+  }
 }
