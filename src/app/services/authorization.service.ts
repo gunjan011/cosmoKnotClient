@@ -5,7 +5,7 @@ import { map, tap } from 'rxjs/operators';
 import { ActiveUserData } from '../models/activeUser';
 import { Token } from '../models/tokens';
 import { } from '@angular/core/';
-import { cosmoknotURL } from '../../environments/environment';
+import { APIURL } from '../../environments/environment.prod';
 //import { Token } from '@angular/compiler';
 
 const httpOptions = {
@@ -43,7 +43,7 @@ export class AuthorizationService {
 
   login(user) {
     
-    return this.http.post(`${cosmoknotURL}/user/login`, {user: user})
+    return this.http.post(`${APIURL}/user/login`, {user: user})
       .subscribe((token: Token) => {
         localStorage.setItem('id_token', token.sessionToken);
       })
