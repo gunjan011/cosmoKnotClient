@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './unprotectedViews/homepage/homepage.component';
@@ -18,7 +21,8 @@ import {
   MatDialogModule,
   MatButtonModule,
   MatSlideToggleModule,
-  MatCardModule
+  MatCardModule,
+  MatExpansionModule
  } from '@angular/material';
 //import { JwtModule } from '@auth0/angular-jwt';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +36,7 @@ import { ApodComponent } from './unprotectedViews/apod/apod.component';
 import { ApodService } from './services/apod.service';
 import { SiteNavComponent } from './Navs/site-nav/site-nav.component';
 import { UserNavComponent } from './Navs/user-nav/user-nav.component';
+import { UpdateProfileComponent } from './protectedViews/user-profile/update-profile/update-profile.component';
 
 
 
@@ -52,19 +57,23 @@ import { UserNavComponent } from './Navs/user-nav/user-nav.component';
     CreateUserDiagBoxComponent,
     ApodComponent,
     SiteNavComponent,
-    UserNavComponent
+    UserNavComponent,
+    UpdateProfileComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
     MatInputModule,
     MatDialogModule,
     MatButtonModule,
     MatSlideToggleModule,
     MatCardModule,
+    MatExpansionModule,
     //JwtModule,
     BrowserAnimationsModule
   ],
