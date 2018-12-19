@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActiveUserData } from '../../models/activeUser';
 import { BehaviorSubject } from 'rxjs';
 
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',

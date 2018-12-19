@@ -1,41 +1,43 @@
 <h5>Update your profile!</h5> 
 <div class="userUpdateForm">
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Username
-      </mat-panel-title>
-      <mat-panel-description>
-        click here to change it
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <form #newUsername="ngForm" (ngSubmit)="updateUsername()">  
-      <mat-form-field>
-        <input matInput type="text" name="username" [(ngModel)]="user.username">
-      </mat-form-field>
-      <button id="update-username-btn" type="submit" mat-mini-fab color="accent" (click)="submitted=false">
-          edit
-      </button>
-    </form>
-  </mat-expansion-panel>
+    <mat-expansion-panel>
+      <form #newUsername="ngForm" >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Username
+          </mat-panel-title>
+          <mat-panel-description>
+            click here to change it
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+   
+        <mat-form-field>
+          <input matInput type="text" name="username" [(ngModel)]="user_props.username">
+        </mat-form-field>
+        <button id="update-username-btn" type="submit" mat-mini-fab color="accent" (click)="submitted=true">
+            edit
+        </button>
+      </form>
+    </mat-expansion-panel>
 
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Password
-      </mat-panel-title>
-      <mat-panel-description>
-        click here to change it
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <form #newPass="ngForm" (ngSubmit)="updatePass()">
-      <mat-form-field>
-        <input matInput type="password" name="password" [(ngModel)]="user.password">
-      </mat-form-field>
-      <button id="update-pass-btn" type="submit" mat-mini-fab color="accent" (click)="submitted=false">
-          edit
-      </button>     
-    </form>
-  </mat-expansion-panel>
+    <mat-expansion-panel>
+      <form #newPass="ngForm">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Password
+          </mat-panel-title>
+          <mat-panel-description>
+            click here to change it
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+          <input matInput type="password" name="password" [(ngModel)]="user_props.password">
+        </mat-form-field>
+        <button id="update-pass-btn" type="submit" mat-mini-fab color="accent" (click)="submitted=true">
+            edit
+        </button>
+      </form>
+    </mat-expansion-panel>    
 </div>

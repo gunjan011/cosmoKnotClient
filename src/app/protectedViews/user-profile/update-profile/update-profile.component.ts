@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ActiveUserData } from 'src/app/models/activeUser';
 import { ProfileService } from '../../../services/profile.service';
+
+export class UserUpdate{
+  username? : string;
+  password? : string
+}
 
 @Component({
   selector: 'app-update-profile',
@@ -9,16 +13,15 @@ import { ProfileService } from '../../../services/profile.service';
   styleUrls: ['./update-profile.component.css']
 })
 export class UpdateProfileComponent{
+  user_props = new UserUpdate
 
-  user = new ActiveUserData
-  
-
+  private newUsername : string;
+  private newPass : string;
   submitted = false;
  
 
   constructor(
     private profile : ProfileService
-
   ) { }
 
 
@@ -31,3 +34,4 @@ export class UpdateProfileComponent{
   }
  
 }
+

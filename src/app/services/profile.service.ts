@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { ActiveUserData } from '../models/activeUser';
 
 @Injectable({
@@ -6,5 +7,7 @@ import { ActiveUserData } from '../models/activeUser';
 })
 export class ProfileService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 }
