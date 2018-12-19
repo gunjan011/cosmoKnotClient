@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActiveUserData } from '../../models/activeUser';
+import { ActiveUserData, Token } from '../../models/activeUser';
 import { BehaviorSubject } from 'rxjs';
 
 

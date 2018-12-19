@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActiveUserData, tokens } from '../../models/activeUser'
 
 @Component({
   selector: 'app-user-nav',

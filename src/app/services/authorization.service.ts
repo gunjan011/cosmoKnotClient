@@ -1,18 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { ActiveUserData } from '../models/activeUser';
-import { Token } from '../models/tokens';
-import { } from '@angular/core/';
+import { HttpClient } from '@angular/common/http';
+import { ActiveUserData, Token } from '../models/activeUser';
 import { cosmoknotURL } from '../../environments/environment';
-//import { Token } from '@angular/compiler';
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-};
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +35,7 @@ export class AuthorizationService {
     
     return this.http.post(`${cosmoknotURL}/user/login`, {user: user})
       .subscribe((token: Token) => {
-        localStorage.setItem('id_token', token.sessionToken);
+        localStorage.setItem('sessionToken', token.sessionToken);
       })
 
   }
