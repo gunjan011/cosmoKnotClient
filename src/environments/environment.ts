@@ -1,13 +1,16 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+export const environment = {
+  production: false,
+};
 
-export const environment1 = {
+export const gkey = {
   production: false,
   nasa_api_key1: "EvU3DzditQY4ezLs3w0QvGSLXlQOyF5NsKs2tfZM"
 };
 
-export const environment2 = {
+export const jkey = {
   production : false, 
   nasa_api_key2 : 'XJtEhwjDtqK3p6oWeN3p8BGqgsPGS66ecVao5mzy'
 } ;

@@ -3,9 +3,9 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
-import { environment1, environment2 } from './environments/environment';
+import { gkey, jkey } from './environments/environment';
 
-if (environment1.production || environment2.production) {
+if (gkey.production || jkey.production) {
   enableProdMode();
 }
 
