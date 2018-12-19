@@ -1,7 +1,7 @@
 <h5>Update your profile!</h5> 
 <div class="userUpdateForm">
     <mat-expansion-panel>
-      <form #newUsername="ngForm" >
+      <form #newUsername="ngForm" (ngSubmit)="newName()">
         <mat-expansion-panel-header>
           <mat-panel-title>
             Username
@@ -22,7 +22,7 @@
 
 
     <mat-expansion-panel>
-      <form #newPass="ngForm">
+      <form #newPass="ngForm" (ngSubmit)="newPass()">
         <mat-expansion-panel-header>
           <mat-panel-title>
             Password

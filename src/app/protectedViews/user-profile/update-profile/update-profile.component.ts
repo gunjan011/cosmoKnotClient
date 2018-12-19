@@ -15,8 +15,8 @@ export class UserUpdate{
 export class UpdateProfileComponent{
   user_props = new UserUpdate
 
-  private newUsername : string;
-  private newPass : string;
+  private username : string;
+  private password : string;
   submitted = false;
  
 

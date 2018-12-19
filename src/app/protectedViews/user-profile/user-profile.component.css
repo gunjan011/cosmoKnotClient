@@ -24,17 +24,8 @@
     padding: 2em;
 }
 
-.external-links{
-    position: relative;
-    top: 0;
-    right: 0;
-    float: right;
-    height: fit-content;
+.profile-editor{
     width: fit-content;
-    text-align: right;
-    background-color: rgba(76, 192, 148, 0.551);
-    border: 0.1em solid black;
-    margin: 0.2em;
 }
 
 .user-profile-journal{
